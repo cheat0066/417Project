@@ -37,6 +37,12 @@
 
 
 # Tried to simplify the code so that I could better understand what was happening and have it print out the slope and y-intercepts
+# TODO: print out the formatted version of the slope and y-intercepts as they are seen in the above comments: i.e. 
+
+#0 <= x <=        30 ; y =      61.0000 +       0.6333 x ; interpolation
+#30 <= x <=       60 ; y =      98.0000 +      -0.6000 x ; interpolation
+#60 <= x <=       90 ; y =      20.0000 +       0.7000 x ; interpolation
+#90 <= x <=      120 ; y =     128.0000 +      -0.5000 x ; interpolation
 
 def interpolate_line(times, readings):
     # added -1 to length because it was giving me an error message that it was out of bounds before doing so
@@ -51,4 +57,8 @@ if __name__ == '__main__':
     readings_core_1 = [63.0, 81.0, 63.0, 82.0, 69.0]
     readings_core_2 = [50.0, 68.0, 52.0, 70.0, 58.0]
     readings_core_3 = [58.0, 77.0, 60.0, 79.0, 65.0]
-    interpolate_line(times, readings)
+    
+    interpolate_line(times, readings_core_0)
+    interpolate_line(times, readings_core_1)
+    interpolate_line(times, readings_core_2)
+    interpolate_line(times, readings_core_3)
