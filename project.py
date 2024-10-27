@@ -17,15 +17,21 @@
 #60 <= x <=       90 ; y =      20.0000 +       0.7000 x ; interpolation
 #90 <= x <=      120 ; y =     128.0000 +      -0.5000 x ; interpolation
 
-def interpolate_line(times: list[float], readings: list[float]) -> None:
+# Begin quoted code from Thomas Kennedy at
+# https://odumedia.mediaspace.kaltura.com/media/2024+CS417+-+Semester+Project+Getting+Started+-+Interpolation/1_au89jcla
+
+#def interpolate_line(times: list[float], readings: list[float]) -> None:
     # Compute slope
     #m = (y_1 - y_0) / (x_1 - x_0)
     #slope = (readings[1] - readings[0]) / (times[1] - times[0])
 
-    for k in range(len(times)):
-        slope = (readings[k + 1] - readings[k]) / (times[k + 1] - times[k])
+#    for k in range(len(times)):
+#        slope = (readings[k + 1] - readings[k]) / (times[k + 1] - times[k])
     
     # Compute y-intercept
-        y_intercept = readings[k] - (slope * times[k])
+#        y_intercept = readings[k] - (slope * times[k])
 
-        print(f"{slope=} {y_intercept=}")
+#        print(f"{slope=} {y_intercept=}")
+
+# End quoted code
+
