@@ -37,7 +37,6 @@
 
 
 # Tried to simplify the code so that I could better understand what was happening and have it print out the slope and y-intercepts
-# TODO: figure out how to receive all lines of sample input and times without having to explicitly state them in a list
 
 def interpolate_line(times, readings):
     # added -1 to length because it was giving me an error message that it was out of bounds before doing so
@@ -48,5 +47,8 @@ def interpolate_line(times, readings):
 
 if __name__ == '__main__':
     times = [0, 30, 60 , 90, 120]
-    readings = [61.0, 80.0, 62.0, 83.0, 68.0]
+    readings_core_0 = [61.0, 80.0, 62.0, 83.0, 68.0]
+    readings_core_1 = [63.0, 81.0, 63.0, 82.0, 69.0]
+    readings_core_2 = [50.0, 68.0, 52.0, 70.0, 58.0]
+    readings_core_3 = [58.0, 77.0, 60.0, 79.0, 65.0]
     interpolate_line(times, readings)
