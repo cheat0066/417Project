@@ -35,22 +35,13 @@
 
 # End quoted code
 
-
-# Tried to simplify the code so that I could better understand what was happening and have it print out the slope and y-intercepts
-# TODO: print out the formatted version of the slope and y-intercepts as they are seen in the above comments: i.e. 
-
-#0 <= x <=        30 ; y =      61.0000 +       0.6333 x ; interpolation
-#30 <= x <=       60 ; y =      98.0000 +      -0.6000 x ; interpolation
-#60 <= x <=       90 ; y =      20.0000 +       0.7000 x ; interpolation
-#90 <= x <=      120 ; y =     128.0000 +      -0.5000 x ; interpolation
-
 def interpolate_line(times, readings):
     # added -1 to length because it was giving me an error message that it was out of bounds before doing so
 
-    for i in range(len(times)-1):
+    for i in range(len(times) - 1):
         slope = (readings[i + 1] - readings[i]) / (times[i + 1] - times[i])
         y_intercept = readings[i] - (slope * times[i])
-        print(f"{slope=} {y_intercept=}")
+        print(f" {times[i]} <= x <= {times[i+1]} ; {y_intercept} + {slope} x ; interpolation")
 
 if __name__ == '__main__':
     times = [0, 30, 60 , 90, 120]
@@ -60,6 +51,9 @@ if __name__ == '__main__':
     readings_core_3 = [58.0, 77.0, 60.0, 79.0, 65.0]
     
     interpolate_line(times, readings_core_0)
+    print()
     interpolate_line(times, readings_core_1)
+    print()
     interpolate_line(times, readings_core_2)
+    print()
     interpolate_line(times, readings_core_3)
