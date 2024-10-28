@@ -48,7 +48,7 @@ def interpolate_line(times, readings):
     # added -1 to length because it was giving me an error message that it was out of bounds before doing so
 
     for i in range(len(times)-1):
-        slope = (readings[i + 1] - readings[k]) / (times[i + 1] - times[i])
+        slope = (readings[i + 1] - readings[i]) / (times[i + 1] - times[i])
         y_intercept = readings[i] - (slope * times[i])
         print(f"{slope=} {y_intercept=}")
 
